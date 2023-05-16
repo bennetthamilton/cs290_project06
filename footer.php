@@ -1,6 +1,6 @@
 </main>
   <footer>
-    <p>&copy; 2020 YOUR NAME</p>
+    <p>&copy; 2023 Bennett Hamilton</p>
   </footer>
 </body>
 </html>
