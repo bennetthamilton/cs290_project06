@@ -40,7 +40,7 @@ mysqli_close($db);
   <p><?= $motorcycle_cc ?>cc, <?= $motorcycle_hp ?>hp</p>
   <div class="list_controls">
     <div class="control"><a href="wish.php?id=<?= $motorcycle_id ?>">+ Add to Wish List</a></div>
-    <div class="control">+ Add to Cart</div>
+    <div class="control"><a href="add_to_cart.php?id=<?= $motorcycle_id ?>">+ Add to Cart</a></div>
   </div>
 </div>
 <?php include '../footer.php'; ?>
