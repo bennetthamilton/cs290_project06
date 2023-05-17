@@ -2,10 +2,10 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-$database_hostname = "db.osucascades.net";
-$database_port = 3306;
-$database_username = "cs290";
-$database_password = "290-motor-mania";
+$database_hostname = "localhost";
+$database_port = 8889;
+$database_username = "motorcycle_mania";
+$database_password = "password";
 $database_db_name = "motorcycle_mania";
 
 // Note: These are intentionally insecure.
