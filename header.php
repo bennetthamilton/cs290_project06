@@ -6,7 +6,6 @@ if (isset($_SESSION["wishList"])) {
   $wishListLength = 0;
 }
 
-session_start();
 if (isset($_SESSION["cart"])) {
   $numberOfItemsInCart = count($_SESSION["cart"]);
 } else {
