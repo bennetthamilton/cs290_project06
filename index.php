@@ -13,7 +13,14 @@ if ($db->connect_error) {
   die("Error: Could not connect to database. " . $db->connect_error);
 }
 
-$featured_motorcycle_id = rand(1, 5);
+$motorcycle_ids_sql = $db->query("SELECT id FROM motorcycles");
+$motorcycle_ids = [];
+while ($motorcycle = $motorcycle_ids_sql->fetch_assoc()) {
+ array_push($motorcycle_ids, $motorcycle['id']); 
+}
+
+$featured_motorcycle_id = $motorcycle_ids[rand(1, sizeof($motorcycle_ids) - 1)];
+
 $sql_featured_motorcycle = "SELECT motorcycles.id AS id, model, year, engine_cc, engine_hp,
   manufacturers.id AS manufacturer_id, manufacturers.name AS manufacturer_name,
   categories.id AS category_id, categories.name AS category_name
